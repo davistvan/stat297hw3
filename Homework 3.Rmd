@@ -9,4 +9,17 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-tests
+```{r}
+find_pi = function(B = 5000, seed = 10, make_plot = TRUE){
+  # Control seed
+  set.seed(seed)
+  
+  # Simulate B points
+  point = matrix(runif(2*B, -1, 1), B, 2)
+  hat_pi = 0
+  for(i in 1:B){
+  point[i, 1]
+    
+  return(hat_pi)
+  }
+```

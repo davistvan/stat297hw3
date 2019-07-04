@@ -28,5 +28,20 @@ print(test/5000*4)
 ```
 
 ```{r}
-runif(2*B, -1, 1)
+find_pi = function(B = 5000, seed = 10, make_plot = TRUE){
+  # Control seed
+  set.seed(seed)
+  
+  # Simulate B points
+  point = matrix(runif(2*B, -1, 1), B, 2)
+  hat_pi = 0
+  for (i in 1:B) {
+  if(point[i,1]^2+point[i,2]^2 <= 1){
+     hat_pi = hat_pi + 1}
+}
+ 
+ return(hat_pi/5000*4)
+}
+
+find_pi()
 ```
